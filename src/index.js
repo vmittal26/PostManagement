@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import mdl from 'material-design-lite';
+import roboto from 'typeface-roboto';
 import 'material-design-lite/material.min.css';
 import style from './assets/css/style.css';
 import {Provider} from 'react-redux';

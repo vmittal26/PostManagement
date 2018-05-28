@@ -1,0 +1,10 @@
+@import "~material-design-icons/iconfont/material-icons.css";
+
+.mdl-layout-title{
+    font-size:1.2rem;
+}
+
+.mdl-layout__content{
+    margin: 0 auto;
+    width:90%;
+}

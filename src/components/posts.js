@@ -14,7 +14,7 @@ class Posts extends Component {
 
     render() {
         return (
-            <div className="mdl-spinner mdl-js-spinner is-active"></div>
+            <div className="">Loading Posts</div>
         );
     }
 }

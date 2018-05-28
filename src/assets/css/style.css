@@ -8,3 +8,21 @@
     margin: 0 auto;
     width:90%;
 }
+.mdl-layout__drawer{
+    transition-duration: 500ms;
+}
+
+.post-form{
+    width:80%;
+    margin: 0 auto;
+}
+.post-form__form{
+    display: flex;
+    padding: 1rem 5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-form__title{
+    text-align: center;
+}

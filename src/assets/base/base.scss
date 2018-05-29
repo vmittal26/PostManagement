@@ -1,0 +1,10 @@
+@import "../../../node_modules/material-design-lite/src/**/*.scss";
+@import "../components/post-form";
+
+.mdl-layout-title {
+    font-size: 1.2rem;
+}
+
+.mdl-layout__drawer {
+    transition-duration: 500ms;
+}

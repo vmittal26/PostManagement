@@ -1,0 +1,17 @@
+.post-form{
+    display: block;
+    width:95%;
+    margin: 1rem auto;
+    text-align:center;
+    padding:1rem;
+
+    &__title{
+        text-align: center;
+    }
+
+    &__submit{
+        display: inline-block;
+        min-width: 200px;
+        color:#fff;
+    }
+}

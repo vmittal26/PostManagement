@@ -4,25 +4,26 @@
     font-size:1.2rem;
 }
 
-.mdl-layout__content{
-    margin: 0 auto;
-    width:90%;
-}
+
 .mdl-layout__drawer{
     transition-duration: 500ms;
 }
 
 .post-form{
-    width:80%;
-    margin: 0 auto;
-}
-.post-form__form{
-    display: flex;
-    padding: 1rem 5rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: block;
+    width:95%;
+    margin: 1rem auto;
+    text-align:center;
+    padding:1rem;
 }
 
+.post-form__texfield{
+    width:45%;
+}
 .post-form__title{
     text-align: center;
+}
+.post-form__submit{
+    display: inline-block;
+    min-width: 200px;
 }

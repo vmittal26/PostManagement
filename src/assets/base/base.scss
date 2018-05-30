@@ -1,7 +1,9 @@
 @import "../variables/variables";
 @import "../../../node_modules/material-design-lite/src/material-design-lite.scss";
-// @import "../components/button";
+@import "../components/button";
 @import "../components/post-form";
+@import "../components/post-list";
+
 
 .mdl-layout-title {
     font-size: 1.2rem;

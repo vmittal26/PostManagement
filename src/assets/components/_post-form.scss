@@ -1,17 +1,26 @@
-.post-form{
-    display: block;
-    width:95%;
+.post-form {
+    display: flex;
+    width: 95%;
     margin: 1rem auto;
-    text-align:center;
-    padding:1rem;
+    text-align: center;
+    height: 75vh;
 
-    &__title{
+    &__card {
+        width: 100%;
+        padding: 1rem;
+        margin:auto;
+    }
+    &__grid{
+        margin:0;
+    }
+    &__title {
         text-align: center;
     }
 
-    &__submit{
+    &__submit {
         display: inline-block;
-        min-width: 200px;
-        color:#fff;
+        width: 200px;
+        color: #fff;
+        margin:auto;
     }
 }

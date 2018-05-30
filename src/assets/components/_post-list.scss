@@ -1,0 +1,15 @@
+.post-list{
+    display: flex;
+    width: 95%;
+    margin: 1rem auto;
+    text-align: center; 
+    height: 75vh;
+  
+    &__card{
+        padding: 1rem;
+    }
+    &__btn-add-post{
+        margin-left:auto;
+        width: 200px;
+    }
+}

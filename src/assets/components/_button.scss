@@ -1,4 +1,9 @@
-.button-primary{
-    @extend .mdl-js-button;
-   
+.btn-primary{
+    @extend .mdl-button;
+    @extend .mdl-button--colored;
+    @extend .mdl-button--raised;
+
+    &:hover{
+        background-color:lighten($color-primary-1,10%);
+    }
 }

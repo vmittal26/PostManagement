@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import fetchPosts from '../actions/index';
 
-class Posts extends Component {
+export class Posts extends Component {
 
     componentWillMount() {
         this

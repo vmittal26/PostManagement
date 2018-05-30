@@ -1,4 +1,6 @@
-@import "../../../node_modules/material-design-lite/src/**/*.scss";
+@import "../variables/variables";
+@import "../../../node_modules/material-design-lite/src/material-design-lite.scss";
+// @import "../components/button";
 @import "../components/post-form";
 
 .mdl-layout-title {

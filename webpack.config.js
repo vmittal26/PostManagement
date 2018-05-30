@@ -28,7 +28,8 @@ module.exports = {
                     }, {
                       loader: 'sass-loader',
                       options: {
-                        importer: globImporter()
+                        importer: globImporter(),
+                        includePaths: ['./node_modules']
                       }
                     }
                   ])

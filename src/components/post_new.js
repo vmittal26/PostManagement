@@ -1,46 +1,22 @@
 import React, {Component} from 'react';
+import CreatePostForm from './createpost_form';
+// import {createPost} from '../actions/index';
+// import {connect} from 'react-redux';
 
 export default class PostNew extends Component {
-
     constructor(props) {
         super(props);
     }
-
+    submit(values) {
+     this.createPost(values);
+    }
     render() {
         return (
-            <div className ="post-form">
-                <div className="post-form__card mdl-card mdl-shadow--2dp">
-                    <h3 className="post-form__title">Create Posts</h3>
-                    <form className="post-form__grid mdl-grid">
-                        <div
-                            className="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input
-                                className="mdl-textfield__input "
-                                type="text"
-                                pattern="[a-zA-Z0-9]+"
-                                id="sample1"></input>
-                            <label className="mdl-textfield__label ">Title</label>
-                            <span className="mdl-textfield__error">Only alphabet and no spaces, please!</span>
-                        </div>
-                        <div
-                            className="mdl-cell--2-offset-desktop mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input className="mdl-textfield__input " type="text" id="sample1"></input>
-                            <label className="mdl-textfield__label ">Categories</label>
-                        </div>
-                        <div
-                            className="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-textfield mdl-js-textfield">
-                            <textarea className="mdl-textfield__input" type="text" rows="9"></textarea>
-                            <label className="mdl-textfield__label">Description</label>
-                        </div>
-
-                    </form>
-                    <button
-                        className="post-form__submit mdl-js-ripple-effect mdl-js-button btn-primary">
-                        Submit
-                    </button>
-                </div>
+            <div>
+                <CreatePostForm />
             </div>
-
         );
     }
 }
+
+// export default connect(null, {createPost})(PostNew);

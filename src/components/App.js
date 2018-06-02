@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div
-                className="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+                className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <Header/>
                 <Drawer/>
                 <main className="mdl-layout__content">

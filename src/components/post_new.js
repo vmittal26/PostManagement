@@ -1,22 +1,28 @@
 import React, {Component} from 'react';
 import CreatePostForm from './createpost_form';
-// import {createPost} from '../actions/index';
-// import {connect} from 'react-redux';
+import {createPost} from '../actions/index';
+import { withRouter } from 'react-router-dom';
 
-export default class PostNew extends Component {
+
+export class PostNew extends Component {
     constructor(props) {
         super(props);
+        this.submit = this.submit.bind(this);
     }
     submit(values) {
-     this.createPost(values);
+        console.log('Submitting Values');
+        let promise = createPost(values).promise;
+        
+        promise.then(()=>this.props.history.push('/'))
+        .catch((error)=>console.log('error while submitting form'));
     }
     render() {
         return (
             <div>
-                <CreatePostForm />
+                <CreatePostForm onSubmit={this.submit} />
             </div>
         );
     }
 }
 
-// export default connect(null, {createPost})(PostNew);
+export default withRouter(PostNew);

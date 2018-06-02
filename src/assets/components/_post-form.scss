@@ -4,6 +4,9 @@
     margin: 1rem auto;
     height: 75vh;
 
+    @extend .mdl-card;
+    @extend .mdl-shadow--2dp;
+
     &__card {
         width: 100%;
         padding: 1rem;
@@ -11,9 +14,17 @@
     }
     &__grid{
         margin:0;
+        @extend .mdl-grid;
     }
     &__title {
         text-align: center;
+    }
+
+    &__textfield,&__textarea{
+        width:90%;
+    }
+    &__content{
+        display: block;
     }
 
     &__submit {
@@ -21,5 +32,9 @@
         width: 200px;
         color: #fff;
         margin:auto;
+        @extend .btn-primary;
+    }
+    &__error{
+        color:red;
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default (props)=>{
-    const {input, meta, label ,className} = props;
+    const {input, meta, label ,className,custom} = props;
     let classList = "";
     if(className){
         classList = `${className} mdl-textfield mdl-js-textfield`; 
@@ -12,7 +12,7 @@ export default (props)=>{
     return (
         <div>
             <div className ={classList}>
-                <textarea {...input} className ="mdl-textfield__input" rows="9"/>
+                <textarea {...input} className ={meta.error && meta.touched ?'mdl-textfield__input danger':'mdl-textfield__input'}  rows="9"/>
                 <label className="mdl-textfield__label ">{label}</label>
             </div>
             <div className ="post-form__error">{meta.error && meta.touched &&<span >{meta.error}</span>}</div>

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Field, reduxForm} from 'redux-form';
-import {createPost} from '../actions/index';
+
 import TextField from './textfield';
 import TextArea from './textarea';
+
 
 export class CreatePostForm extends Component {
 
@@ -17,22 +18,24 @@ export class CreatePostForm extends Component {
         const {handleSubmit, submitting} = this.props;
         return (
             <div className="post-form">
-                <div className="post-form__card mdl-card mdl-shadow--2dp">
+                <div className="post-form__card">
                     <h3 className="post-form__title">Create Posts</h3>
-                    <form onSubmit={handleSubmit} className="post-form__grid mdl-grid">
+                    <form onSubmit={handleSubmit} className="post-form__grid">
                         <div className ="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-                            <Field name="title" label="Title" component={TextField}/>
+                            <Field className ="post-form__textfield" name="title" label="Title" component={TextField}/>
                         </div>
-                        <div className ="mdl-cell--2-offset-desktop mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-                            <Field name="categories" label="Categories" component={TextField}/>
+                        <div className =" mdl-cell mdl-cell--2-offset-desktop mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                            <Field className ="post-form__textfield" name="categories" label="Categories" component={TextField}/>
                         </div>
-                        <div className ="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-                            <Field name="content" label = "Content" component={TextArea}/>
+                        <div className ="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                            <Field  className ="post-form__textarea"name="content" label = "Content" custom={"custom"} component={TextArea}/>
+                        </div>
+                        <div className ="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
                         </div>
                         <button
                             type="submit"
                             disabled={submitting}
-                            className="post-form__submit mdl-js-ripple-effect mdl-js-button btn-primary"
+                            className="post-form__submit mdl-js-ripple-effect mdl-js-button"
                             ref="btnSubmit">Submit
                         </button>
                     </form>
@@ -44,27 +47,16 @@ export class CreatePostForm extends Component {
 
 }
 
-const onSubmit = (props) => {
-    // alert(JSON.stringify(props));
-    createPost(props);
-}
 
 const validate = (values) => {
     const errors = {}
-    if (!values.title) errors.title = 'Required';
-    if (!values.categories)  errors.categories = 'Required';
-    if (!values.content)   errors.content = 'Required';
+    if (!values.title) errors.title = 'Enter Title';
+    if (!values.categories)  errors.categories = 'Enter Categories';
+    if (!values.content)   errors.content = 'Enter Content';
     return errors
 }
-const renderField = ({input,meta,label})=>{
-    <div>
-        <input {...input}/>
-        <label className="mdl-textfield__label ">{label}</label>
-        {meta.error && meta.touched}<span>{meta.error}</span>
-    </div>
-}
+
 export default reduxForm(
            {form: 'PostsNewForm', 
-            onSubmit, 
             validate
 })(CreatePostForm);

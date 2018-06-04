@@ -2,7 +2,6 @@
     display: flex;
     width: 95%;
     margin: 1rem auto;
-    height: 75vh;
 
     @extend .mdl-card;
     @extend .mdl-shadow--2dp;
@@ -26,13 +25,20 @@
     &__content{
         display: block;
     }
+    &__button-group{
+        display: block;
+        margin: auto;
+    }
 
-    &__submit {
+    &__submit,&__cancel {
         display: inline-block;
-        width: 200px;
+        width: 150px;
         color: #fff;
-        margin:auto;
         @extend .btn-primary;
+    }
+    &__cancel{
+        margin-left:2px;
+        padding: 0px;
     }
     &__error{
         color:red;

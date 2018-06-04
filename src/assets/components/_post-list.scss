@@ -1,15 +1,20 @@
-.post-list{
+.post-list {
     display: flex;
     width: 95%;
     margin: 1rem auto;
-    text-align: center; 
-    height: 75vh;
-  
-    &__card{
-        padding: 1rem;
+    text-align: center;
+    height: 100vh;
+
+    &__card {
+        padding: 1.5rem;
     }
-    &__btn-add-post{
-        margin-left:auto;
+    &__btn-add-post {
+        margin-left: auto;
         width: 200px;
     }
+    &__post-table {
+        margin-top: 2rem;
+        @extend .mdl-data-table;
+        @extend .mdl-shadow--2dp; 
+    } 
 }

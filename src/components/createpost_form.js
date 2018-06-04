@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Field, reduxForm} from 'redux-form';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import TextField from './textfield';
 import TextArea from './textarea';
 
@@ -18,26 +18,23 @@ export class CreatePostForm extends Component {
         return (
             <div className="post-form">
                 <div className="post-form__card">
-                    <h3 className="post-form__title">Create Posts</h3>
+                    <h3 className="post-form__heading">Create Posts</h3>
                     <form onSubmit={handleSubmit} className="post-form__grid">
-                        <div
-                            className="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div className="post-form__title">
                             <Field
                                 className="post-form__textfield"
                                 name="title"
                                 label="Title"
                                 component={TextField}/>
                         </div>
-                        <div
-                            className=" mdl-cell mdl-cell--2-offset-desktop mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div className="post-form__categories">
                             <Field
                                 className="post-form__textfield"
                                 name="categories"
                                 label="Categories"
                                 component={TextField}/>
                         </div>
-                        <div
-                            className="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div className="post-form__content">
                             <Field
                                 className="post-form__textarea"
                                 name="content"
@@ -45,16 +42,16 @@ export class CreatePostForm extends Component {
                                 custom={"custom"}
                                 component={TextArea}/>
                         </div>
-                        <div
-                            className="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone mdl-cell--8-col-tablet"></div>
-                        <div className ="post-form__button-group">
+                        <div className="post-form__placeholder-column"></div>
+                        <div className="post-form__button-group">
                             <button
                                 type="submit"
                                 disabled={submitting}
                                 className="post-form__submit mdl-js-ripple-effect mdl-js-button"
                                 ref="btnSubmit">Submit
                             </button>
-                            <Link to="/"
+                            <Link
+                                to="/"
                                 className="post-form__cancel mdl-js-ripple-effect mdl-js-button"
                                 ref="btnSubmit">Cancel
                             </Link>

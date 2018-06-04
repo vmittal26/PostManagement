@@ -3,7 +3,6 @@ import CreatePostForm from './createpost_form';
 import {createPost} from '../actions/index';
 import { withRouter } from 'react-router-dom';
 
-
 export class PostNew extends Component {
     constructor(props) {
         super(props);
@@ -12,8 +11,8 @@ export class PostNew extends Component {
     submit(values) {
         console.log('Submitting Values');
         let promise = createPost(values).promise;
-        
-        promise.then(()=>this.props.history.push('/'))
+        promise
+        .then(()=>this.props.history.push('/'))
         .catch((error)=>console.log('error while submitting form'));
     }
     render() {

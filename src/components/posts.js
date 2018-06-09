@@ -6,9 +6,7 @@ import {Link} from 'react-router-dom';
 export class Posts extends Component {
 
     componentWillMount() {
-        this
-            .props
-            .fetchPosts();
+        this.props.fetchPosts();
     }
     componentDidMount() {
         componentHandler.upgradeAllRegistered();

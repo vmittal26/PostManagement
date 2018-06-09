@@ -17,6 +17,7 @@ export class CreatePostForm extends Component {
         const {handleSubmit, submitting} = this.props;
         return (
             <div className="post-form">
+
                 <div className="post-form__card">
                     <h3 className="post-form__heading">Create Posts</h3>
                     <form onSubmit={handleSubmit} className="post-form__grid">

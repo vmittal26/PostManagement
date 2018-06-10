@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 const Drawer=()=>(
         <div className="mdl-layout__drawer">
-         <span className="mdl-layout-title">Title</span>
+         <span className="mdl-layout-title">Blog Post Management</span>
         </div>
     );
 
